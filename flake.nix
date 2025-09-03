@@ -17,7 +17,7 @@
 
         installPhase = ''
           cd themes
-          bash ./install.sh -s compact --tweaks outline nord -d $out/share/themes
+          bash ./install.sh -s compact --tweaks outline nordfox -d $out/share/themes
         '';
 
         meta = with pkgs.lib; {
