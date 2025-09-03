@@ -2723,8 +2723,7 @@ scrollbar {
 		box-shadow: none;
 		outline: none;
 		transition: all 200ms linear;
-
-		background-color: color-mix(in srgb, currentColor 40%, transparent);
+		background-color: $text-disabled;
 
 		&:hover {
 			background-color: $text-secondary-disabled;
@@ -2767,11 +2766,6 @@ scrollbar {
 				margin: 0;
 				min-width: $space-size - 2px;
 				min-height: $space-size - 2px;
-				background-color: color-mix(
-					in srgb,
-					currentColor 40%,
-					transparent
-				);
 				border: none;
 			}
 
@@ -3661,8 +3655,7 @@ separator {
  * Lists *
  *********/
 
-// $list-row: if($variant == 'light', rgba($white, 0.75), rgba($white, 0.08));
-$list-row: if($variant == 'light', rgba($base, 0.4), $fill);
+$list-row: if($variant == 'light', $grey-100, $fill);
 
 %circular_list {
 	border-radius: $corner-radius;
@@ -4876,7 +4869,8 @@ decoration {
 	&.maximize,
 	&.close {
 		color: $titlebar-text-secondary;
-		background-color: gtkalpha(currentColor, 0.1);
+		/* background-color: gtkalpha(currentColor, 0.1); */
+		background: rgba($fill, 0.1);
 
 		&:hover {
 			color: $titlebar-text;

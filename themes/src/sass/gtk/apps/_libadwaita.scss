@@ -10,7 +10,7 @@
 }
 
 %nautilus_content_style {
-	background-color: if($variant == 'light', rgba($grey-200, 0.4), $fill);
+	background-color: if($variant == 'light', $grey-100, $fill);
 	border-radius: $corner-radius;
 	margin: 0 $space-size $space-size $space-size;
 }
@@ -23,12 +23,16 @@
 
 // Sidebar & Scrollbar
 %sidebar_style {
-	background-color: if($variant == 'light', $grey-150, $grey-900);
+	background-color: if($variant == 'light', $grey-100, $grey-850);
 
-	@if $colorscheme == 'nord' {
-		background-color: if($variant == 'light', $grey-150, #262e38);
-	} @else if $colorscheme == 'carbon' {
-		background-color: if($variant == 'light', $grey-150, $grey-950);
+	@if $colorscheme == 'carbonfox' {
+		background-color: if($variant == 'light', $grey-100, $grey-900);
+	} @else if $colorscheme == 'duskfox' {
+		background-color: if($variant == 'light', $grey-100, $grey-900);
+	} @else if $colorscheme == 'nordfox' {
+		background-color: if($variant == 'light', $grey-100, $grey-850);
+	} @else if $colorscheme == 'terafox' {
+		background-color: if($variant == 'light', $grey-100, $grey-850);
 	}
 
 	color: on($background);
@@ -43,7 +47,7 @@
 %sidebar_scrollbar {
 	> range > trough {
 		> slider {
-			background-color: color-mix(in srgb, currentColor 40%, transparent);
+			background-color: $text-disabled;
 
 			&:hover {
 				background-color: $text-secondary-disabled;
@@ -290,7 +294,7 @@ avatar {
 		color: $text-secondary;
 		box-shadow: none;
 		outline: none;
-		background-color: if($variant == 'light', rgba($base, 0.6), $fill);
+		background-color: if($variant == 'light', $grey-100, $fill);
 		color: $text;
 	}
 
@@ -341,6 +345,7 @@ viewswitcher {
 
 	&.wide {
 		button.toggle {
+			background-color: $titlebar-fill;
 			border-radius: $space-size / 2;
 
 			&:first-child {

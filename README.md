@@ -59,7 +59,7 @@ sudo apt install gtk2-engines-murrine
 
 ## 🔨 Applying the Theme
 
-- For **GTK3**, apply themes from **Gnome Tweaks** or **Refine**
+- For **GTK3**, apply themes from **Gnome Tweaks**, **Refine** or **Tuner**
 - For GTK4 applications it is only necessary to have moved the `assets`, `gtk.css` and `gtk-dark.css` files to the `~/.config/gtk-4.0` path,
   and if you notice that the theme has not been applied, just close and reopen the application.
 
@@ -103,13 +103,13 @@ Run the following command in the terminal for a general installation
 > The `./install.sh` allows some specific options like:
 
 ```sh
-./install.sh --tweaks carbon macos outline float -t green -l
+./install.sh --tweaks duskfox macos outline float -t orange -l
 ```
 
 > To customise the name of the theme, you can use the `-n` parameter, e.g.
 
 ```sh
-./install.sh -n "Nightfox-Float-Border" --tweaks outline float
+./install.sh -n "Duskfox-Float-Border" --tweaks outline float
 ```
 
 > [!TIP]
@@ -122,7 +122,7 @@ Run the following command in the terminal for a general installation
 
 -n, --name NAME         Specify theme name (Default: Nightfox)
 
--t, --theme VARIANT...  Specify theme accent color variant(s) [default|purple|pink|red|orange|yellow|green|teal|grey|all] (Default: blue)
+-t, --theme VARIANT...  Specify theme accent color variant(s) [default|green|grey|orange|pink|purple|red|teal|yellow|all] (Default: blue)
 
 -c, --color VARIANT...  Specify color variant(s) [light|dark] (Default: All variants)
 
@@ -135,11 +135,11 @@ Run the following command in the terminal for a general installation
 -u, --uninstall         Uninstall/Remove installed themes or links
 
 --tweaks                Specify versions for tweaks
-                        1. [carbon|nord]  Carbon|Nord ColorSchemes version
-                        2. black          Blackness color version
-                        3. float          Floating gnome-shell panel style
-                        4. outline        Windows with 2px outline style
-                        5. macos          macOS style windows button
+                        1. [carbonfox|duskfox|nordfox|terafox] Carbonfox|Duskfox|Nordfox|Terafox ColorSchemes version
+                        2. black      Blackness color version
+                        3. float      Floating gnome-shell panel style
+                        4. outline    Windows with 2px outline style
+                        5. macos      macOS style windows button
 
 -h, --help              Show help
 ```
